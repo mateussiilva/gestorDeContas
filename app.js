@@ -1,11 +1,5 @@
 
-function Gasto(descricao,valor, dataGasto){
-    this.descricao = descricao;
-    this.valor = valor;
-    this.data = dataGasto;
-    // this.pagamento = formaPagamento;
-    
-}
+
 
 // function criarLinhaTabela(){
 //     const linha = document.createElement('tr')
@@ -25,8 +19,7 @@ function Gasto(descricao,valor, dataGasto){
 
 
 const select_pagamento = document.querySelector("#formas-pagamentos");
-const formas_pagamentos = [
-    'Dinheiro','Cartão de Credito','Cartão de Debito','Cheque'];
+const formas_pagamentos = ['Dinheiro','Cartão de Credito','Cartão de Debito','Cheque'];
 function cerateOpcaoPagamanto(){
     for(let opcao in formas_pagamentos){
         const option = document.createElement("option");
@@ -50,6 +43,13 @@ const inputValor = document.querySelector("#input-valor");
 const btnInsert = document.querySelector("#btn-envio");
 const table = document.querySelector("#body-table");
 
+
+function Gasto(descricao,valor, dataGasto){
+    this.descricao = descricao;
+    this.valor = valor;
+    this.data = dataGasto;
+}
+
 btnInsert.addEventListener('click', function(events){
     const nome = descricao.value
     const valor =  inputValor.value
@@ -58,19 +58,22 @@ btnInsert.addEventListener('click', function(events){
     if (
         nome.length === 0 ||
         valor.length === 0 ||
-        dataPgamento.length === 0){
+        dataPgamento.length === 0){//melhorar as restrições dos valores.
             alert("[ERRO] - VALORES INVALIDOS ")
         }
     else{
         // console.log("Tudo certo")
         const gasto  = new Gasto(nome,data,valor)
         const linha = criarLinha()
-        for(let i in gasto){
-            const valor = gasto[i]
+
+        for(let key  in gasto){
+            const valor = gasto[key] // 
+
             let dado = document.createElement('td')
             dado.innerHTML = valor
             linha.append(dado)
         };
+        
         table.appendChild(linha)
     }
 

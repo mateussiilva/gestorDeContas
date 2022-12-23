@@ -1,10 +1,21 @@
+
+/*  */
+
+:root{
+    --imagebg:url('assets/scattered-forcefields.svg')
+}
+
+
 *{
     padding: 0;
     margin: 0;
 }
 body{
-    background-color: rgb(17, 71, 116);
+    /* background-color: rgb(17, 71, 116); */
+    background-image: var(--imagebg);
+
 }
+
 .form-gastos{
     margin: 30px auto;
     background-color: white;
@@ -21,10 +32,10 @@ body{
     padding: 15px;
     
 }
+
 #btn-envio{
     padding: 5px;
 }
-
 
 .tabela-gastos{
     margin: auto;

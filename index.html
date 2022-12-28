@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,45 +8,40 @@
     <title>Gestor de Gastos</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="form-gastos">
-                <div class="item">
-                    <label for="input-descricao">Descrição:</label>
-                    <input type="text"  id="input-descricao">
+    <header>
+        <img src="#" alt="Money +">
+    </header>
+    <div class="main">
+        <h1>Planeje seu futuro</h1>
+        <img src="https://images.unsplash.com/photo-1667808926971-5d2ce805edf0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZmluYW4lQzMlQTdhc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"  class="image" alt="Image da Empresa">
+        <p>Lorem ipsum dolor, sit amet con
+            sectetur adipisicing elit. Rem temporibus odio soluta nobis vero nihil
+            molestias corrupti asperiores exercitationem at culpa inventore ut 
+            animi molestiae, sed doloribus totam
+            quisquam repellat!
+        </p>
+    </div>
+    <div class="container-form">
+        <div class="form">
+            <form >
+                <!-- <button class="btn-rede-social">Entrar com Google</button>
+                <button class="btn-rede-social">Entrar com Apple</button>
+                <button class="btn-rede-social">Entrar com Facebook</button> -->
+                <div>
+                    <label for="" class="label-form">Email:</label>
+                    <input type="text" class="input-form">
                 </div>
-
-                <div class="item">
-                    <label for="input-valor">Valor:</label>
-                    <input type="text" id="input-valor">
+                <div>
+                    <label for="" class="label-form">Senha:</label>
+                    <input type="password" class="input-form">
                 </div>
-
-                <div class="item">
-                    <label for="input-date">Data:</label>
-                    <input type="date" id="input-date">
-                </div>
-
-                <div class="item">
-                    <label for="">Forma de Pagamento:</label>
-                    <select id="formas-pagamentos">
-                    </select>
-                </div>
-
-                <input type="button" id="btn-envio" value="Inserir Dados">
-            </div>
-        <div class="tabela-gastos">
-            <table>
-                <thead>
-                    <th>Descrição</th>
-                    <th>Data </th>
-                    <th>Valor</th>
-                    <th>Forma Pagamento</th>
-                </thead>
-                <tbody id="body-table">
-                </tbody>
-            </table>
+            </form>
         </div>
     </div>
+    
 </body>
 <script src="app.js"></script>
+
 </html>

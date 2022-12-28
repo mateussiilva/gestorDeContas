@@ -1,55 +1,19 @@
 
-/*  */
-
-:root{
-    --imagebg:url('assets/scattered-forcefields.svg')
-}
-
 
 *{
     padding: 0;
     margin: 0;
-}
-body{
-    /* background-color: rgb(17, 71, 116); */
-    background-image: var(--imagebg);
 
 }
 
-.form-gastos{
-    margin: 30px auto;
-    background-color: white;
-    padding: 7px;
-    max-width: 80%;
-    height: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 7px;
+:root{
+    --cor1: #ad7c00;
+    --cor2: #ffb700;
+    --cor3: #fab300;
+    --cor4: #002ead;
+    --cor5: #0043fa;
+
+}
+
+
     
-}
-.item{
-    width: 100%;
-    padding: 15px;
-    
-}
-
-#btn-envio{
-    padding: 5px;
-}
-
-.tabela-gastos{
-    margin: auto;
-    background-color: white;
-    width: 85%;
-    padding: 5px;
-}
-
-table{
-    border-collapse: collapse;
-    width: 100%;
-}
-th,tr,td{
-    border: 1px solid black;
-    text-align: center;
-    padding: 3px;
-}

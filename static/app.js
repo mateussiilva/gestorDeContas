@@ -3,35 +3,49 @@ function Gasto(descricao, dataGasto, valor){
     this.descricao = descricao;
     this.data = dataGasto;
     this.valor = valor;
-    // this.pagamento = formaPagamento;
     
 }
 
-const select_pagamento = document.querySelector("#formas-pagamentos");
-const formas_pagamentos = [
-    'Dinheiro','Cartão de Credito','Cartão de Debito','Cheque'];
-function cerateOpcaoPagamanto(){
-    for(let opcao in formas_pagamentos){
-        const option = document.createElement("option");
-        option.innerHTML = formas_pagamentos[opcao];
-        option.setAttribute('value', `opcao ${opcao}`)
-        select_pagamento.appendChild(option);
-    }
+const dadosFalsos = {
+    des:'Monster Energy',
+    data:'12/02/2023',
+    valor:12.9,
+    pag:'Cartao Debito',
 }
-cerateOpcaoPagamanto()
+
+function criarItemDaLinha(valor){
+    let td = document.createElement("td")
+    td.innerText = valor
+    return td
+
+}
 
 
-// MINHAS VARIAVEIS
+function criarLinhaNaTabela(tabela,dadosParTabela)  {
+    let linha = document.createElement("tr")
+    
+    for (let dado in dadosParTabela){
+        let valor = dadosParTabela[dado]
+        let td = criarItemDaLinha(valor)
+        linha.appendChild(td)    
+    }
+
+
+    tabela.appendChild(linha)
+}
+
 const descricao = document.querySelector("#input-descricao");
 const dataPgamento = document.querySelector("#input-date");
 const valor = document.querySelector("#input-valor");
 const btnInsert = document.querySelector("#btn-envio");
+const tabela = document.querySelector("#corpo-tabela")
+
 
 btnInsert.addEventListener('click', function(events){
-    console.log(descricao.value)
-    console.log(dataPgamento.value)
-    console.log(valor.value)
+    criarLinhaNaTabela(tabela,dadosFalsos)
+    // console.log(tabela)
 
+    
 
 })
 
